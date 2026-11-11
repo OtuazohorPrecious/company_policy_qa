@@ -1,0 +1,11 @@
+id,question,expected,expected_source
+D1,What is the daily allowance for a domestic work trip?,answer,04_business_travel_policy#5
+D2,How long does my password need to be?,answer,06_it_equipment_and_security_policy#3
+D3,Can I claim for wine at a client dinner?,answer,05_expense_reimbursement_policy#5
+D4,How long do I have to use my time off in lieu?,answer,10_working_hours_and_overtime_policy#3
+D5,Do hybrid employees get an allowance for internet at home?,answer,03_remote_and_hybrid_work_policy#3
+D6,How many days of bereavement leave do I get?,refuse,
+D7,Does the company provide health insurance?,refuse,
+D8,Can I get a company car or a fuel allowance?,refuse,
+D9,What is the dress code for the office?,refuse,
+D10,When are annual bonuses paid?,refuse,

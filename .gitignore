@@ -1,0 +1,16 @@
+# Secrets
+.env
+
+# Local vector store (rebuilt on every startup)
+.chroma/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.venv-*/
+.pytest_cache/
+
+# Word lock files
+~$*

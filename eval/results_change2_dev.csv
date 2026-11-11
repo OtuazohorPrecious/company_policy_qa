@@ -1,0 +1,11 @@
+id,question,answered,answer,citations,outcome,notes
+D1,What is the daily allowance for a domestic work trip?,true,"The daily allowance for a domestic work trip is **NGN 30,000 per day**. This per diem covers meals and local incidentals and is paid for each night spent away from home.",04_business_travel_policy#5,,
+D2,How long does my password need to be?,true,Your password must be at least **12 characters** long.,06_it_equipment_and_security_policy#3,,
+D3,Can I claim for wine at a client dinner?,true,"No, you cannot claim for wine at a client dinner because alcohol is not reimbursable.",05_expense_reimbursement_policy#5,,
+D4,How long do I have to use my time off in lieu?,true,You must use your time off in lieu (TOIL) within **2 months** or it is lost.,10_working_hours_and_overtime_policy#3,,
+D5,Do hybrid employees get an allowance for internet at home?,true,"Yes, hybrid employees receive an internet and utilities allowance of **NGN 25,000 per month**, paid with salary.",03_remote_and_hybrid_work_policy#3,,
+D6,How many days of bereavement leave do I get?,false,The policy documents do not contain information about this.,,,
+D7,Does the company provide health insurance?,false,The policy documents do not contain information about this.,,,
+D8,Can I get a company car or a fuel allowance?,false,The policy documents do not contain information about this.,,,
+D9,What is the dress code for the office?,false,The policy documents do not contain information about this.,,,
+D10,When are annual bonuses paid?,false,The policy documents do not contain information about this.,,,

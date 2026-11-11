@@ -1,0 +1,641 @@
+.\.venv\Scripts\python.exe -m uvicorn app.main:app --port 8000
+INFO:     Started server process [39204]
+INFO:     Waiting for application startup.
+2026-11-11 10:14:12,479 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 10:14:13,123 INFO policy_qa: Indexed 48 sections from C:\Users\user\Desktop\PythonProjects\TN RAG project\docs\policies (chat=gpt-4o-mini, embed=text-embedding-3-small, top_k=5, top_k_split=8, gate=0.400)
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2026-11-11 10:21:35,895 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:21:36,792 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 10:21:38,655 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:21:38,666 INFO policy_qa: ask {"question": "How many days of annual leave do I get after my probation ends?", "answered": true, "top_dense_similarity": 0.6547, "retrieved": ["01_annual_leave_policy#3", "01_annual_leave_policy#2", "01_annual_leave_policy#6", "01_annual_leave_policy#1", "01_annual_leave_policy#5"], "first_attempt": {"verified": 1, "invalid": 0}}
+INFO:     127.0.0.1:57577 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 10:21:42,162 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:21:42,499 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 10:21:44,896 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:21:44,912 INFO policy_qa: ask {"question": "How many unused leave days can I carry over into next year, and when do I have to use them?", "answered": true, "top_dense_similarity": 0.706, "retrieved": ["01_annual_leave_policy#5", "02_sick_leave_policy#1", "01_annual_leave_policy#6", "01_annual_leave_policy#3", "01_annual_leave_policy#1", "07_learning_and_development_policy#3", "07_learning_and_development_policy#1", "01_annual_leave_policy#4"], "sub_questions": ["How many unused leave days can I carry over into next year?", "When do I have to use my unused leave days that are carried over into next year?"], "first_attempt": {"verified": 2, "invalid": 0}}
+INFO:     127.0.0.1:57581 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 10:21:48,260 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:21:48,733 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 10:21:50,726 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:21:50,731 INFO policy_qa: ask {"question": "When do I need a medical certificate for sick leave?", "answered": true, "top_dense_similarity": 0.7365, "retrieved": ["02_sick_leave_policy#3", "02_sick_leave_policy#4", "02_sick_leave_policy#5", "02_sick_leave_policy#1", "01_annual_leave_policy#6"], "first_attempt": {"verified": 1, "invalid": 0}}
+INFO:     127.0.0.1:57583 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 10:21:54,137 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:21:54,518 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 10:21:56,408 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:21:56,420 INFO policy_qa: ask {"question": "Which days am I expected to be in the office?", "answered": true, "top_dense_similarity": 0.5027, "retrieved": ["03_remote_and_hybrid_work_policy#1", "01_annual_leave_policy#4", "10_working_hours_and_overtime_policy#4", "02_sick_leave_policy#2", "10_working_hours_and_overtime_policy#2"], "first_attempt": {"verified": 1, "invalid": 0}}
+INFO:     127.0.0.1:57586 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 10:21:59,807 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:22:00,182 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 10:22:01,519 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:22:01,531 INFO policy_qa: ask {"question": "How far in advance do I need to request an international trip?", "answered": true, "top_dense_similarity": 0.49, "retrieved": ["04_business_travel_policy#2", "01_annual_leave_policy#4", "04_business_travel_policy#4", "03_remote_and_hybrid_work_policy#2", "01_annual_leave_policy#1"], "first_attempt": {"verified": 1, "invalid": 0}}
+INFO:     127.0.0.1:57588 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 10:22:04,491 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:22:04,787 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 10:22:06,151 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:22:06,158 INFO policy_qa: ask {"question": "What is the deadline for submitting an expense claim?", "answered": true, "top_dense_similarity": 0.6509, "retrieved": ["05_expense_reimbursement_policy#2", "04_business_travel_policy#6", "05_expense_reimbursement_policy#5", "05_expense_reimbursement_policy#4", "05_expense_reimbursement_policy#1"], "first_attempt": {"verified": 1, "invalid": 0}}
+INFO:     127.0.0.1:57590 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 10:22:09,023 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:22:09,343 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 10:22:11,752 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:22:11,761 INFO policy_qa: ask {"question": "I lost my work laptop. What should I do?", "answered": true, "top_dense_similarity": 0.4839, "retrieved": ["06_it_equipment_and_security_policy#1", "06_it_equipment_and_security_policy#2", "03_remote_and_hybrid_work_policy#4", "03_remote_and_hybrid_work_policy#1", "08_parental_leave_policy#4"], "first_attempt": {"verified": 2, "invalid": 0}}
+INFO:     127.0.0.1:57592 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 10:22:14,957 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:22:15,270 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 10:22:17,070 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:22:17,077 INFO policy_qa: ask {"question": "What is my yearly budget for training and courses?", "answered": true, "top_dense_similarity": 0.6125, "retrieved": ["07_learning_and_development_policy#1", "04_business_travel_policy#5", "07_learning_and_development_policy#3", "07_learning_and_development_policy#4", "02_sick_leave_policy#3", "07_learning_and_development_policy#2", "01_annual_leave_policy#6", "01_annual_leave_policy#4"], "sub_questions": ["What is my yearly budget for training?", "What is my yearly budget for courses?"], "first_attempt": {"verified": 1, "invalid": 0}}
+INFO:     127.0.0.1:57596 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 10:22:19,962 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:22:20,247 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 10:22:22,378 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:22:22,391 INFO policy_qa: ask {"question": "How much paternity leave do I get?", "answered": true, "top_dense_similarity": 0.7014, "retrieved": ["08_parental_leave_policy#2", "08_parental_leave_policy#1", "08_parental_leave_policy#3", "08_parental_leave_policy#4", "01_annual_leave_policy#3"], "first_attempt": {"verified": 2, "invalid": 0}}
+INFO:     127.0.0.1:57598 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 10:22:25,564 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:22:25,967 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 10:22:27,844 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:22:30,208 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:22:30,217 INFO policy_qa: ask {"question": "A supplier sent me a gift worth NGN 25,000. Can I keep it?", "answered": true, "top_dense_similarity": 0.5712, "retrieved": ["09_code_of_conduct_gifts_policy#2", "09_code_of_conduct_gifts_policy#3", "05_expense_reimbursement_policy#2", "05_expense_reimbursement_policy#3", "09_code_of_conduct_gifts_policy#4"], "first_attempt": {"verified": 0, "invalid": 1}, "retry": {"verified": 1, "invalid": 0}}
+INFO:     127.0.0.1:55517 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 10:22:33,387 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:22:33,735 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 10:22:37,475 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:22:37,482 INFO policy_qa: ask {"question": "I stayed in a hotel costing NGN 70,000 per night on a domestic work trip. Is that within the limit, and who needs to approve my claim?", "answered": true, "top_dense_similarity": 0.6958, "retrieved": ["04_business_travel_policy#4", "04_business_travel_policy#5", "05_expense_reimbursement_policy#5", "05_expense_reimbursement_policy#1", "03_remote_and_hybrid_work_policy#3", "09_code_of_conduct_gifts_policy#2", "04_business_travel_policy#6", "07_learning_and_development_policy#1"], "sub_questions": ["Is the hotel cost of NGN 70,000 per night within the limit for domestic work trips?", "Who needs to approve my claim for the hotel expenses incurred during the domestic work trip?"], "first_attempt": {"verified": 2, "invalid": 0}}
+INFO:     127.0.0.1:55519 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 10:22:40,617 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:22:40,944 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 10:22:44,620 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:22:44,626 INFO policy_qa: ask {"question": "The company paid NGN 300,000 for my certification. If I resign 8 months after finishing it, what do I owe, and what happens to my unused annual leave?", "answered": true, "top_dense_similarity": 0.6348, "retrieved": ["07_learning_and_development_policy#4", "01_annual_leave_policy#6", "01_annual_leave_policy#5", "05_expense_reimbursement_policy#2", "01_annual_leave_policy#1", "09_code_of_conduct_gifts_policy#2", "01_annual_leave_policy#3", "05_expense_reimbursement_policy#4"], "sub_questions": ["If I resign 8 months after finishing my certification that cost the company NGN 300,000, what do I owe the company?", "What happens to my unused annual leave if I resign?"], "first_attempt": {"verified": 2, "invalid": 0}}
+INFO:     127.0.0.1:55521 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 10:22:47,464 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:22:47,848 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 10:22:47,858 INFO policy_qa: ask {"question": "What percentage of my salary does the company contribute to my pension?", "answered": false, "top_dense_similarity": 0.3223, "retrieved": ["01_annual_leave_policy#6", "07_learning_and_development_policy#4", "02_sick_leave_policy#5", "06_it_equipment_and_security_policy#1", "03_remote_and_hybrid_work_policy#3"], "refused_by": "gate"}
+INFO:     127.0.0.1:55523 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 10:22:50,839 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:22:51,144 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 10:22:51,155 INFO policy_qa: ask {"question": "Can I bring my dog to the office?", "answered": false, "top_dense_similarity": 0.3325, "retrieved": ["03_remote_and_hybrid_work_policy#1", "02_sick_leave_policy#2", "02_sick_leave_policy#5", "09_code_of_conduct_gifts_policy#4", "03_remote_and_hybrid_work_policy#4"], "refused_by": "gate"}
+INFO:     127.0.0.1:55525 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 10:22:54,353 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:22:54,700 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 10:22:54,708 INFO policy_qa: ask {"question": "What is the vesting schedule for employee stock options?", "answered": false, "top_dense_similarity": 0.2976, "retrieved": ["07_learning_and_development_policy#4", "01_annual_leave_policy#6", "08_parental_leave_policy#5", "07_learning_and_development_policy#1", "01_annual_leave_policy#3"], "refused_by": "gate"}
+INFO:     127.0.0.1:55527 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 10:25:48,595 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:25:48,983 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 10:25:50,399 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:25:50,403 INFO policy_qa: ask {"question": "How many days of annual leave do I get after my probation ends?", "answered": true, "top_dense_similarity": 0.6547, "retrieved": ["01_annual_leave_policy#3", "01_annual_leave_policy#2", "01_annual_leave_policy#6", "01_annual_leave_policy#1", "01_annual_leave_policy#5"], "first_attempt": {"verified": 1, "invalid": 0}}
+INFO:     127.0.0.1:55893 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 10:25:53,519 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:25:54,003 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 10:25:56,175 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:25:56,182 INFO policy_qa: ask {"question": "How many unused leave days can I carry over into next year, and when do I have to use them?", "answered": true, "top_dense_similarity": 0.706, "retrieved": ["01_annual_leave_policy#5", "02_sick_leave_policy#1", "01_annual_leave_policy#6", "01_annual_leave_policy#3", "01_annual_leave_policy#4", "01_annual_leave_policy#1", "02_sick_leave_policy#4", "07_learning_and_development_policy#3"], "sub_questions": ["How many unused leave days can I carry over into next year?", "When do I have to use the unused leave days that I carry over?"], "first_attempt": {"verified": 2, "invalid": 0}}
+INFO:     127.0.0.1:55896 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 10:25:59,137 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:25:59,656 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 10:26:01,403 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:26:01,405 INFO policy_qa: ask {"question": "When do I need a medical certificate for sick leave?", "answered": true, "top_dense_similarity": 0.7365, "retrieved": ["02_sick_leave_policy#3", "02_sick_leave_policy#4", "02_sick_leave_policy#5", "02_sick_leave_policy#1", "01_annual_leave_policy#6"], "first_attempt": {"verified": 1, "invalid": 0}}
+INFO:     127.0.0.1:55898 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 10:26:04,381 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:26:04,722 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 10:26:06,275 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:26:06,282 INFO policy_qa: ask {"question": "Which days am I expected to be in the office?", "answered": true, "top_dense_similarity": 0.5027, "retrieved": ["03_remote_and_hybrid_work_policy#1", "01_annual_leave_policy#4", "10_working_hours_and_overtime_policy#4", "02_sick_leave_policy#2", "10_working_hours_and_overtime_policy#2"], "first_attempt": {"verified": 1, "invalid": 0}}
+INFO:     127.0.0.1:55900 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 10:26:09,158 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:26:09,671 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 10:26:11,029 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:26:11,040 INFO policy_qa: ask {"question": "How far in advance do I need to request an international trip?", "answered": true, "top_dense_similarity": 0.4901, "retrieved": ["04_business_travel_policy#2", "01_annual_leave_policy#4", "04_business_travel_policy#4", "03_remote_and_hybrid_work_policy#2", "01_annual_leave_policy#1"], "first_attempt": {"verified": 1, "invalid": 0}}
+INFO:     127.0.0.1:55903 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 10:26:14,043 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:26:14,360 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 10:26:15,744 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:26:15,746 INFO policy_qa: ask {"question": "What is the deadline for submitting an expense claim?", "answered": true, "top_dense_similarity": 0.6509, "retrieved": ["05_expense_reimbursement_policy#2", "04_business_travel_policy#6", "05_expense_reimbursement_policy#5", "05_expense_reimbursement_policy#4", "05_expense_reimbursement_policy#1"], "first_attempt": {"verified": 1, "invalid": 0}}
+INFO:     127.0.0.1:55905 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 10:26:18,641 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:26:19,126 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 10:26:21,487 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:26:21,491 INFO policy_qa: ask {"question": "I lost my work laptop. What should I do?", "answered": true, "top_dense_similarity": 0.4839, "retrieved": ["06_it_equipment_and_security_policy#1", "06_it_equipment_and_security_policy#2", "03_remote_and_hybrid_work_policy#4", "03_remote_and_hybrid_work_policy#1", "08_parental_leave_policy#4"], "first_attempt": {"verified": 2, "invalid": 0}}
+INFO:     127.0.0.1:55907 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 10:26:24,493 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:26:24,868 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 10:26:26,657 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:26:26,663 INFO policy_qa: ask {"question": "What is my yearly budget for training and courses?", "answered": true, "top_dense_similarity": 0.6125, "retrieved": ["07_learning_and_development_policy#1", "04_business_travel_policy#5", "07_learning_and_development_policy#3", "07_learning_and_development_policy#4", "02_sick_leave_policy#3", "07_learning_and_development_policy#2", "01_annual_leave_policy#6", "01_annual_leave_policy#4"], "sub_questions": ["What is my yearly budget for training?", "What is my yearly budget for courses?"], "first_attempt": {"verified": 1, "invalid": 0}}
+INFO:     127.0.0.1:55914 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 10:26:29,878 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:26:30,231 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 10:26:32,466 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:26:32,467 INFO policy_qa: ask {"question": "How much paternity leave do I get?", "answered": true, "top_dense_similarity": 0.7014, "retrieved": ["08_parental_leave_policy#2", "08_parental_leave_policy#1", "08_parental_leave_policy#3", "08_parental_leave_policy#4", "01_annual_leave_policy#3"], "first_attempt": {"verified": 2, "invalid": 0}}
+INFO:     127.0.0.1:65499 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 10:26:35,612 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:26:35,925 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 10:26:37,394 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:26:39,178 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:26:39,197 INFO policy_qa: ask {"question": "A supplier sent me a gift worth NGN 25,000. Can I keep it?", "answered": false, "top_dense_similarity": 0.5712, "retrieved": ["09_code_of_conduct_gifts_policy#2", "09_code_of_conduct_gifts_policy#3", "05_expense_reimbursement_policy#2", "05_expense_reimbursement_policy#3", "09_code_of_conduct_gifts_policy#4"], "first_attempt": {"verified": 0, "invalid": 1}, "retry": {"verified": 0, "invalid": 1}, "refused_by": "no_verified_citation"}
+INFO:     127.0.0.1:65502 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 10:26:42,422 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:26:42,758 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 10:26:44,713 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:26:46,402 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:26:46,414 INFO policy_qa: ask {"question": "I stayed in a hotel costing NGN 70,000 per night on a domestic work trip. Is that within the limit, and who needs to approve my claim?", "answered": true, "top_dense_similarity": 0.6958, "retrieved": ["04_business_travel_policy#4", "04_business_travel_policy#6", "04_business_travel_policy#5", "05_expense_reimbursement_policy#5", "05_expense_reimbursement_policy#1", "03_remote_and_hybrid_work_policy#3", "02_sick_leave_policy#5", "09_code_of_conduct_gifts_policy#2"], "sub_questions": ["Is the hotel cost of NGN 70,000 per night within the limit for domestic work trips?", "Who needs to approve my claim for the hotel expenses?"], "first_attempt": {"verified": 1, "invalid": 1}, "retry": {"verified": 1, "invalid": 0}}
+INFO:     127.0.0.1:65504 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 10:26:49,732 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:26:50,210 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 10:26:53,815 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:26:53,825 INFO policy_qa: ask {"question": "The company paid NGN 300,000 for my certification. If I resign 8 months after finishing it, what do I owe, and what happens to my unused annual leave?", "answered": true, "top_dense_similarity": 0.6348, "retrieved": ["07_learning_and_development_policy#4", "01_annual_leave_policy#6", "01_annual_leave_policy#5", "05_expense_reimbursement_policy#2", "01_annual_leave_policy#1", "09_code_of_conduct_gifts_policy#2", "01_annual_leave_policy#3", "05_expense_reimbursement_policy#4"], "sub_questions": ["If I resign 8 months after finishing my certification that cost the company NGN 300,000, what do I owe the company?", "What happens to my unused annual leave if I resign?"], "first_attempt": {"verified": 3, "invalid": 0}}
+INFO:     127.0.0.1:65506 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 10:26:56,765 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:26:57,107 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 10:26:57,114 INFO policy_qa: ask {"question": "What percentage of my salary does the company contribute to my pension?", "answered": false, "top_dense_similarity": 0.3223, "retrieved": ["01_annual_leave_policy#6", "07_learning_and_development_policy#4", "02_sick_leave_policy#5", "06_it_equipment_and_security_policy#1", "03_remote_and_hybrid_work_policy#3"], "refused_by": "gate"}
+INFO:     127.0.0.1:65508 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 10:27:00,005 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:27:00,336 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 10:27:00,346 INFO policy_qa: ask {"question": "Can I bring my dog to the office?", "answered": false, "top_dense_similarity": 0.3325, "retrieved": ["03_remote_and_hybrid_work_policy#1", "02_sick_leave_policy#2", "02_sick_leave_policy#5", "09_code_of_conduct_gifts_policy#4", "03_remote_and_hybrid_work_policy#4"], "refused_by": "gate"}
+INFO:     127.0.0.1:55665 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 10:27:03,459 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:27:04,045 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 10:27:04,052 INFO policy_qa: ask {"question": "What is the vesting schedule for employee stock options?", "answered": false, "top_dense_similarity": 0.2976, "retrieved": ["07_learning_and_development_policy#4", "01_annual_leave_policy#6", "08_parental_leave_policy#5", "07_learning_and_development_policy#1", "01_annual_leave_policy#3"], "refused_by": "gate"}
+INFO:     127.0.0.1:55667 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 10:27:57,590 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:27:57,937 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 10:27:59,424 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:27:59,431 INFO policy_qa: ask {"question": "How many days of annual leave do I get after my probation ends?", "answered": true, "top_dense_similarity": 0.6547, "retrieved": ["01_annual_leave_policy#3", "01_annual_leave_policy#2", "01_annual_leave_policy#6", "01_annual_leave_policy#1", "01_annual_leave_policy#5"], "first_attempt": {"verified": 1, "invalid": 0}}
+INFO:     127.0.0.1:62019 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 10:28:02,586 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:28:02,945 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 10:28:05,040 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:28:05,050 INFO policy_qa: ask {"question": "How many unused leave days can I carry over into next year, and when do I have to use them?", "answered": true, "top_dense_similarity": 0.706, "retrieved": ["01_annual_leave_policy#5", "02_sick_leave_policy#1", "01_annual_leave_policy#6", "01_annual_leave_policy#3", "01_annual_leave_policy#1", "01_annual_leave_policy#4", "07_learning_and_development_policy#3", "02_sick_leave_policy#4"], "sub_questions": ["How many unused leave days can I carry over into next year?", "When do I have to use my unused leave days?"], "first_attempt": {"verified": 2, "invalid": 0}}
+INFO:     127.0.0.1:62022 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 10:28:07,906 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:28:08,217 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 10:28:09,648 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:28:09,883 INFO policy_qa: ask {"question": "When do I need a medical certificate for sick leave?", "answered": true, "top_dense_similarity": 0.7365, "retrieved": ["02_sick_leave_policy#3", "02_sick_leave_policy#4", "02_sick_leave_policy#5", "02_sick_leave_policy#1", "01_annual_leave_policy#6"], "first_attempt": {"verified": 1, "invalid": 0}}
+INFO:     127.0.0.1:62024 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 10:28:13,059 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:28:13,381 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 10:28:15,016 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:28:15,045 INFO policy_qa: ask {"question": "Which days am I expected to be in the office?", "answered": true, "top_dense_similarity": 0.5034, "retrieved": ["03_remote_and_hybrid_work_policy#1", "01_annual_leave_policy#4", "10_working_hours_and_overtime_policy#4", "02_sick_leave_policy#2", "10_working_hours_and_overtime_policy#2"], "first_attempt": {"verified": 1, "invalid": 0}}
+INFO:     127.0.0.1:62026 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 10:28:17,983 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:28:18,317 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 10:28:19,516 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:28:19,522 INFO policy_qa: ask {"question": "How far in advance do I need to request an international trip?", "answered": true, "top_dense_similarity": 0.4901, "retrieved": ["04_business_travel_policy#2", "01_annual_leave_policy#4", "04_business_travel_policy#4", "03_remote_and_hybrid_work_policy#2", "01_annual_leave_policy#1"], "first_attempt": {"verified": 1, "invalid": 0}}
+INFO:     127.0.0.1:62028 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 10:28:22,448 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:28:22,794 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 10:28:24,129 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:28:24,137 INFO policy_qa: ask {"question": "What is the deadline for submitting an expense claim?", "answered": true, "top_dense_similarity": 0.6509, "retrieved": ["05_expense_reimbursement_policy#2", "04_business_travel_policy#6", "05_expense_reimbursement_policy#5", "05_expense_reimbursement_policy#4", "05_expense_reimbursement_policy#1"], "first_attempt": {"verified": 1, "invalid": 0}}
+INFO:     127.0.0.1:62030 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 10:28:27,027 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:28:27,323 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 10:28:29,561 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:28:29,565 INFO policy_qa: ask {"question": "I lost my work laptop. What should I do?", "answered": true, "top_dense_similarity": 0.4839, "retrieved": ["06_it_equipment_and_security_policy#1", "06_it_equipment_and_security_policy#2", "03_remote_and_hybrid_work_policy#4", "03_remote_and_hybrid_work_policy#1", "08_parental_leave_policy#4"], "first_attempt": {"verified": 2, "invalid": 0}}
+INFO:     127.0.0.1:63362 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 10:28:32,601 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:28:32,984 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 10:28:35,046 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:28:35,061 INFO policy_qa: ask {"question": "What is my yearly budget for training and courses?", "answered": true, "top_dense_similarity": 0.6125, "retrieved": ["07_learning_and_development_policy#1", "04_business_travel_policy#5", "07_learning_and_development_policy#3", "07_learning_and_development_policy#4", "02_sick_leave_policy#3", "07_learning_and_development_policy#2", "01_annual_leave_policy#6", "01_annual_leave_policy#4"], "sub_questions": ["What is my yearly budget for training?", "What is my yearly budget for courses?"], "first_attempt": {"verified": 1, "invalid": 0}}
+INFO:     127.0.0.1:63365 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 10:28:37,878 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:28:38,281 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 10:28:40,352 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:28:40,353 INFO policy_qa: ask {"question": "How much paternity leave do I get?", "answered": true, "top_dense_similarity": 0.7014, "retrieved": ["08_parental_leave_policy#2", "08_parental_leave_policy#1", "08_parental_leave_policy#3", "08_parental_leave_policy#4", "01_annual_leave_policy#3"], "first_attempt": {"verified": 2, "invalid": 0}}
+INFO:     127.0.0.1:63367 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 10:28:43,140 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:28:43,483 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 10:28:45,132 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:28:46,972 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:28:46,985 INFO policy_qa: ask {"question": "A supplier sent me a gift worth NGN 25,000. Can I keep it?", "answered": true, "top_dense_similarity": 0.5712, "retrieved": ["09_code_of_conduct_gifts_policy#2", "09_code_of_conduct_gifts_policy#3", "05_expense_reimbursement_policy#2", "05_expense_reimbursement_policy#3", "09_code_of_conduct_gifts_policy#4"], "first_attempt": {"verified": 0, "invalid": 1}, "retry": {"verified": 1, "invalid": 0}}
+INFO:     127.0.0.1:63369 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 10:28:50,158 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:28:50,470 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 10:28:52,274 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:28:52,278 INFO policy_qa: ask {"question": "I stayed in a hotel costing NGN 70,000 per night on a domestic work trip. Is that within the limit, and who needs to approve my claim?", "answered": true, "top_dense_similarity": 0.7095, "retrieved": ["04_business_travel_policy#4", "04_business_travel_policy#5", "07_learning_and_development_policy#4", "05_expense_reimbursement_policy#5", "04_business_travel_policy#1", "07_learning_and_development_policy#1", "02_sick_leave_policy#5", "03_remote_and_hybrid_work_policy#3"], "sub_questions": ["Is the cost of NGN 70,000 per night for a hotel stay on a domestic work trip within the limit set by company policy?", "Who needs to approve my claim for the hotel stay during the domestic work trip?"], "first_attempt": {"verified": 2, "invalid": 0}}
+INFO:     127.0.0.1:63371 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 10:28:55,593 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:28:56,003 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 10:28:59,263 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:28:59,267 INFO policy_qa: ask {"question": "The company paid NGN 300,000 for my certification. If I resign 8 months after finishing it, what do I owe, and what happens to my unused annual leave?", "answered": true, "top_dense_similarity": 0.6469, "retrieved": ["07_learning_and_development_policy#4", "01_annual_leave_policy#6", "05_expense_reimbursement_policy#2", "01_annual_leave_policy#5", "09_code_of_conduct_gifts_policy#2", "01_annual_leave_policy#1", "05_expense_reimbursement_policy#3", "01_annual_leave_policy#3"], "sub_questions": ["If I resign 8 months after finishing my certification that cost NGN 300,000, what do I owe the company?", "What happens to my unused annual leave if I resign?"], "first_attempt": {"verified": 2, "invalid": 0}}
+INFO:     127.0.0.1:63373 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 10:29:02,281 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:29:02,758 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 10:29:02,764 INFO policy_qa: ask {"question": "What percentage of my salary does the company contribute to my pension?", "answered": false, "top_dense_similarity": 0.3223, "retrieved": ["01_annual_leave_policy#6", "07_learning_and_development_policy#4", "02_sick_leave_policy#5", "06_it_equipment_and_security_policy#1", "03_remote_and_hybrid_work_policy#3"], "refused_by": "gate"}
+INFO:     127.0.0.1:63375 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 10:29:05,713 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:29:06,036 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 10:29:06,049 INFO policy_qa: ask {"question": "Can I bring my dog to the office?", "answered": false, "top_dense_similarity": 0.3325, "retrieved": ["03_remote_and_hybrid_work_policy#1", "02_sick_leave_policy#2", "02_sick_leave_policy#5", "09_code_of_conduct_gifts_policy#4", "03_remote_and_hybrid_work_policy#4"], "refused_by": "gate"}
+INFO:     127.0.0.1:63378 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 10:29:08,927 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:29:09,309 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 10:29:09,317 INFO policy_qa: ask {"question": "What is the vesting schedule for employee stock options?", "answered": false, "top_dense_similarity": 0.2976, "retrieved": ["07_learning_and_development_policy#4", "01_annual_leave_policy#6", "08_parental_leave_policy#5", "07_learning_and_development_policy#1", "01_annual_leave_policy#3"], "refused_by": "gate"}
+INFO:     127.0.0.1:63380 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 10:30:08,790 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:30:09,193 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 10:30:10,735 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:30:10,742 INFO policy_qa: ask {"question": "What is the daily allowance for a domestic work trip?", "answered": true, "top_dense_similarity": 0.6003, "retrieved": ["04_business_travel_policy#5", "03_remote_and_hybrid_work_policy#3", "04_business_travel_policy#4", "01_annual_leave_policy#6", "05_expense_reimbursement_policy#5"], "first_attempt": {"verified": 1, "invalid": 0}}
+INFO:     127.0.0.1:63385 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 10:30:13,546 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:30:13,902 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 10:30:15,226 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:30:15,231 INFO policy_qa: ask {"question": "How long does my password need to be?", "answered": true, "top_dense_similarity": 0.5866, "retrieved": ["06_it_equipment_and_security_policy#3", "06_it_equipment_and_security_policy#4", "02_sick_leave_policy#5", "06_it_equipment_and_security_policy#2", "08_parental_leave_policy#2"], "first_attempt": {"verified": 1, "invalid": 0}}
+INFO:     127.0.0.1:63388 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 10:30:18,035 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:30:18,444 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 10:30:20,164 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:30:20,173 INFO policy_qa: ask {"question": "Can I claim for wine at a client dinner?", "answered": true, "top_dense_similarity": 0.4847, "retrieved": ["05_expense_reimbursement_policy#5", "09_code_of_conduct_gifts_policy#4", "09_code_of_conduct_gifts_policy#3", "04_business_travel_policy#6", "08_parental_leave_policy#5"], "first_attempt": {"verified": 1, "invalid": 0}}
+INFO:     127.0.0.1:63390 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 10:30:23,060 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:30:23,426 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 10:30:24,890 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:30:24,901 INFO policy_qa: ask {"question": "How long do I have to use my time off in lieu?", "answered": true, "top_dense_similarity": 0.5007, "retrieved": ["01_annual_leave_policy#3", "01_annual_leave_policy#4", "02_sick_leave_policy#2", "01_annual_leave_policy#5", "10_working_hours_and_overtime_policy#3"], "first_attempt": {"verified": 1, "invalid": 0}}
+INFO:     127.0.0.1:63392 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 10:30:27,758 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:30:28,060 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 10:30:29,530 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:30:29,533 INFO policy_qa: ask {"question": "Do hybrid employees get an allowance for internet at home?", "answered": true, "top_dense_similarity": 0.7389, "retrieved": ["03_remote_and_hybrid_work_policy#3", "03_remote_and_hybrid_work_policy#1", "03_remote_and_hybrid_work_policy#2", "04_business_travel_policy#5", "05_expense_reimbursement_policy#1"], "first_attempt": {"verified": 1, "invalid": 0}}
+INFO:     127.0.0.1:63394 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 10:30:32,290 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:30:32,622 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 10:30:33,498 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:30:33,507 INFO policy_qa: ask {"question": "How many days of bereavement leave do I get?", "answered": false, "top_dense_similarity": 0.4829, "retrieved": ["01_annual_leave_policy#4", "08_parental_leave_policy#2", "01_annual_leave_policy#3", "02_sick_leave_policy#4", "08_parental_leave_policy#5"], "refused_by": "llm_nothing_covered", "not_covered": "The policy sections do not mention bereavement leave."}
+INFO:     127.0.0.1:63396 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 10:30:36,314 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:30:36,639 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 10:30:37,564 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:30:37,572 INFO policy_qa: ask {"question": "Does the company provide health insurance?", "answered": false, "top_dense_similarity": 0.4312, "retrieved": ["02_sick_leave_policy#5", "06_it_equipment_and_security_policy#1", "05_expense_reimbursement_policy#1", "07_learning_and_development_policy#4", "07_learning_and_development_policy#1"], "refused_by": "llm_nothing_covered", "not_covered": "The sections do not mention health insurance."}
+INFO:     127.0.0.1:63398 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 10:30:40,551 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:30:40,915 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 10:30:41,964 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:30:41,977 INFO policy_qa: ask {"question": "Can I get a company car or a fuel allowance?", "answered": false, "top_dense_similarity": 0.4477, "retrieved": ["06_it_equipment_and_security_policy#1", "03_remote_and_hybrid_work_policy#3", "06_it_equipment_and_security_policy#4", "04_business_travel_policy#5", "05_expense_reimbursement_policy#1", "05_expense_reimbursement_policy#2", "09_code_of_conduct_gifts_policy#4", "05_expense_reimbursement_policy#5"], "sub_questions": ["Can I get a company car?", "Is there a fuel allowance available?"], "refused_by": "llm_nothing_covered", "not_covered": "There is no information regarding company cars or fuel allowances."}
+INFO:     127.0.0.1:63401 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 10:30:44,856 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:30:45,207 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 10:30:45,212 INFO policy_qa: ask {"question": "What is the dress code for the office?", "answered": false, "top_dense_similarity": 0.3732, "retrieved": ["03_remote_and_hybrid_work_policy#1", "09_code_of_conduct_gifts_policy#2", "09_code_of_conduct_gifts_policy#1", "09_code_of_conduct_gifts_policy#3", "01_annual_leave_policy#6"], "refused_by": "gate"}
+INFO:     127.0.0.1:63403 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 10:30:47,950 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:30:48,257 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 10:30:49,151 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 10:30:49,159 INFO policy_qa: ask {"question": "When are annual bonuses paid?", "answered": false, "top_dense_similarity": 0.4349, "retrieved": ["01_annual_leave_policy#6", "01_annual_leave_policy#3", "01_annual_leave_policy#1", "05_expense_reimbursement_policy#4", "01_annual_leave_policy#2"], "refused_by": "llm_nothing_covered", "not_covered": "The sections do not mention annual bonuses."}
+INFO:     127.0.0.1:63405 - "POST /ask HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [39204]
+(base) PS C:\Users\user\Desktop\PythonProjects\TN RAG project> .\.venv\Scripts\python.exe -m pytest -q                       
+EE..................................................                           [100%]
+====================================== ERRORS =======================================
+______________ ERROR at setup of test_rank_table_covers_every_section _______________
+file C:\Users\user\Desktop\PythonProjects\TN RAG project\Claude outputs\test_inspect_retrieval.py, line 10
+  def test_rank_table_covers_every_section(index):
+E       fixture 'index' not found
+>       available fixtures: anyio_backend, anyio_backend_name, anyio_backend_options, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, capteesys, doctest_namespace, free_tcp_port, free_tcp_port_factory, free_udp_port, free_udp_port_factory, monkeypatch, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, subtests, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+C:\Users\user\Desktop\PythonProjects\TN RAG project\Claude outputs\test_inspect_retrieval.py:10
+___________ ERROR at setup of test_rank_table_matches_pipeline_retrieval ____________
+file C:\Users\user\Desktop\PythonProjects\TN RAG project\Claude outputs\test_inspect_retrieval.py, line 19
+  def test_rank_table_matches_pipeline_retrieval(index):
+E       fixture 'index' not found
+>       available fixtures: anyio_backend, anyio_backend_name, anyio_backend_options, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, capteesys, doctest_namespace, free_tcp_port, free_tcp_port_factory, free_udp_port, free_udp_port_factory, monkeypatch, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, subtests, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+C:\Users\user\Desktop\PythonProjects\TN RAG project\Claude outputs\test_inspect_retrieval.py:19
+================================= warnings summary ==================================
+.venv\Lib\site-packages\chromadb\telemetry\opentelemetry\__init__.py:128
+  C:\Users\user\Desktop\PythonProjects\TN RAG project\.venv\Lib\site-packages\chromadb\telemetry\opentelemetry\__init__.py:128: DeprecationWarning: 'asyncio.iscoroutinefunction' is deprecated and slated for removal in Python 3.16; use inspect.iscoroutinefunction() instead
+    if asyncio.iscoroutinefunction(f):
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== short test summary info ==============================
+ERROR Claude outputs/test_inspect_retrieval.py::test_rank_table_covers_every_section
+ERROR Claude outputs/test_inspect_retrieval.py::test_rank_table_matches_pipeline_retrieval
+50 passed, 1 warning, 2 errors in 40.67s
+(base) PS C:\Users\user\Desktop\PythonProjects\TN RAG project> .\.venv\Scripts\python.exe -m uvicorn app.main:app --port 8000
+INFO:     Started server process [5536]
+INFO:     Waiting for application startup.
+2026-11-11 11:03:46,937 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 11:03:47,855 INFO policy_qa: Indexed 48 sections from C:\Users\user\Desktop\PythonProjects\TN RAG project\docs\policies (chat=gpt-4o-mini, embed=text-embedding-3-small, top_k=5, top_k_split=8, gate=0.400)
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2026-11-11 11:04:05,864 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:04:06,569 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 11:04:07,973 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:04:09,198 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:04:09,203 INFO policy_qa: ask {"question": "How many days of annual leave do I get after my probation ends?", "answered": true, "top_dense_similarity": 0.6547, "retrieved": ["01_annual_leave_policy#3", "01_annual_leave_policy#2", "01_annual_leave_policy#6", "01_annual_leave_policy#1", "01_annual_leave_policy#5"], "first_attempt": {"verified": 1, "invalid": 0}, "claim_check": {"sentences": 1, "failed": 0}}
+INFO:     127.0.0.1:63637 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 11:04:12,889 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:04:13,220 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 11:04:15,700 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:04:17,543 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:04:17,556 INFO policy_qa: ask {"question": "How many unused leave days can I carry over into next year, and when do I have to use them?", "answered": true, "top_dense_similarity": 0.706, "retrieved": ["01_annual_leave_policy#5", "02_sick_leave_policy#1", "01_annual_leave_policy#6", "01_annual_leave_policy#3", "01_annual_leave_policy#1", "07_learning_and_development_policy#3", "07_learning_and_development_policy#1", "01_annual_leave_policy#4"], "sub_questions": ["How many unused leave days can I carry over into next year?", "When do I have to use my unused leave days that are carried over into next year?"], "first_attempt": {"verified": 2, "invalid": 0}, "claim_check": {"sentences": 2, "failed": 0}}
+INFO:     127.0.0.1:63641 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 11:04:20,359 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:04:20,688 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 11:04:22,222 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:04:23,440 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:04:23,495 INFO policy_qa: ask {"question": "When do I need a medical certificate for sick leave?", "answered": true, "top_dense_similarity": 0.7365, "retrieved": ["02_sick_leave_policy#3", "02_sick_leave_policy#4", "02_sick_leave_policy#5", "02_sick_leave_policy#1", "01_annual_leave_policy#6"], "first_attempt": {"verified": 1, "invalid": 0}, "claim_check": {"sentences": 1, "failed": 0}}
+INFO:     127.0.0.1:60509 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 11:04:26,296 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:04:26,730 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 11:04:28,570 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:04:29,725 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:04:29,730 INFO policy_qa: ask {"question": "Which days am I expected to be in the office?", "answered": true, "top_dense_similarity": 0.5027, "retrieved": ["03_remote_and_hybrid_work_policy#1", "01_annual_leave_policy#4", "10_working_hours_and_overtime_policy#4", "02_sick_leave_policy#2", "10_working_hours_and_overtime_policy#2"], "first_attempt": {"verified": 1, "invalid": 0}, "claim_check": {"sentences": 1, "failed": 0}}
+INFO:     127.0.0.1:60512 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 11:04:32,515 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:04:32,819 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 11:04:34,273 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:04:35,313 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:04:35,317 INFO policy_qa: ask {"question": "How far in advance do I need to request an international trip?", "answered": true, "top_dense_similarity": 0.4901, "retrieved": ["04_business_travel_policy#2", "01_annual_leave_policy#4", "04_business_travel_policy#4", "03_remote_and_hybrid_work_policy#2", "01_annual_leave_policy#1"], "first_attempt": {"verified": 1, "invalid": 0}, "claim_check": {"sentences": 1, "failed": 0}}
+INFO:     127.0.0.1:60516 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 11:04:38,551 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:04:38,970 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 11:04:40,441 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:04:41,464 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:04:41,466 INFO policy_qa: ask {"question": "What is the deadline for submitting an expense claim?", "answered": true, "top_dense_similarity": 0.6509, "retrieved": ["05_expense_reimbursement_policy#2", "04_business_travel_policy#6", "05_expense_reimbursement_policy#5", "05_expense_reimbursement_policy#4", "05_expense_reimbursement_policy#1"], "first_attempt": {"verified": 1, "invalid": 0}, "claim_check": {"sentences": 1, "failed": 0}}
+INFO:     127.0.0.1:60519 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 11:04:44,312 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:04:44,596 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 11:04:47,903 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:04:49,977 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:04:49,990 INFO policy_qa: ask {"question": "I lost my work laptop. What should I do?", "answered": true, "top_dense_similarity": 0.4839, "retrieved": ["06_it_equipment_and_security_policy#1", "06_it_equipment_and_security_policy#2", "03_remote_and_hybrid_work_policy#4", "03_remote_and_hybrid_work_policy#1", "08_parental_leave_policy#4"], "first_attempt": {"verified": 3, "invalid": 0}, "claim_check": {"sentences": 3, "failed": 0}}
+INFO:     127.0.0.1:60521 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 11:04:52,881 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:04:53,251 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 11:04:55,083 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:04:56,538 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:04:56,541 INFO policy_qa: ask {"question": "What is my yearly budget for training and courses?", "answered": true, "top_dense_similarity": 0.6125, "retrieved": ["07_learning_and_development_policy#1", "04_business_travel_policy#5", "07_learning_and_development_policy#3", "07_learning_and_development_policy#4", "02_sick_leave_policy#3", "07_learning_and_development_policy#2", "01_annual_leave_policy#6", "01_annual_leave_policy#4"], "sub_questions": ["What is my yearly budget for training?", "What is my yearly budget for courses?"], "first_attempt": {"verified": 1, "invalid": 0}, "claim_check": {"sentences": 2, "failed": 0}}
+INFO:     127.0.0.1:60523 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 11:04:59,633 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:04:59,967 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 11:05:02,268 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:05:04,020 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:05:04,022 INFO policy_qa: ask {"question": "How much paternity leave do I get?", "answered": true, "top_dense_similarity": 0.7014, "retrieved": ["08_parental_leave_policy#2", "08_parental_leave_policy#1", "08_parental_leave_policy#3", "08_parental_leave_policy#4", "01_annual_leave_policy#3"], "first_attempt": {"verified": 2, "invalid": 0}, "claim_check": {"sentences": 2, "failed": 0}}
+INFO:     127.0.0.1:64616 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 11:05:06,967 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:05:07,318 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 11:05:08,987 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:05:11,384 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:05:13,437 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:05:15,518 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:05:16,904 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:05:16,917 INFO policy_qa: ask {"question": "A supplier sent me a gift worth NGN 25,000. Can I keep it?", "answered": true, "top_dense_similarity": 0.5712, "retrieved": ["09_code_of_conduct_gifts_policy#2", "09_code_of_conduct_gifts_policy#3", "05_expense_reimbursement_policy#2", "05_expense_reimbursement_policy#3", "09_code_of_conduct_gifts_policy#4"], "first_attempt": {"verified": 0, "invalid": 1}, "retry": {"verified": 1, "invalid": 0}, "claim_check": {"sentences": 3, "failed": 2, "failures": [{"sentence": "You cannot keep the gift worth NGN 25,000 without declaring it.", "verdict": "not_supported", "reason": "checker evidence not found in the named section"}, {"sentence": "You must declare it to Compliance within 5 working days.", "verdict": "not_supported", "reason": "checker evidence not found in the named section"}]}, "claim_check_retry": {"used_retry": true, "dropped": []}}
+INFO:     127.0.0.1:64621 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 11:05:20,307 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:05:20,649 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 11:05:23,036 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:05:25,502 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:05:26,859 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:05:29,588 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:05:30,966 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:05:30,969 INFO policy_qa: ask {"question": "I stayed in a hotel costing NGN 70,000 per night on a domestic work trip. Is that within the limit, and who needs to approve my claim?", "answered": true, "top_dense_similarity": 0.6958, "retrieved": ["04_business_travel_policy#4", "04_business_travel_policy#6", "04_business_travel_policy#5", "05_expense_reimbursement_policy#5", "05_expense_reimbursement_policy#1", "03_remote_and_hybrid_work_policy#3", "02_sick_leave_policy#5", "09_code_of_conduct_gifts_policy#2"], "sub_questions": ["Is the hotel cost of NGN 70,000 per night within the limit for domestic work trips?", "Who needs to approve my claim for the hotel expenses?"], "first_attempt": {"verified": 1, "invalid": 1}, "retry": {"verified": 1, "invalid": 1}, "claim_check": {"sentences": 2, "failed": 1, "failures": [{"sentence": "Since your travel costs were not booked by the Travel Desk, you will need to claim them under the Expense Reimbursement Policy (FIN-01).", "verdict": "not_supported", "reason": "checker evidence not found in the named section"}]}, "claim_check_retry": {"used_retry": true, "dropped": ["Since your travel costs were not booked by the Travel Desk, you will need to claim them under the Expense Reimbursement Policy (FIN-01)."]}}
+INFO:     127.0.0.1:64623 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 11:05:34,100 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:05:34,490 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 11:05:37,977 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:05:40,033 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:05:44,643 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:05:46,716 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:05:46,724 INFO policy_qa: ask {"question": "The company paid NGN 300,000 for my certification. If I resign 8 months after finishing it, what do I owe, and what happens to my unused annual leave?", "answered": true, "top_dense_similarity": 0.6347, "retrieved": ["07_learning_and_development_policy#4", "01_annual_leave_policy#6", "01_annual_leave_policy#5", "05_expense_reimbursement_policy#2", "01_annual_leave_policy#1", "09_code_of_conduct_gifts_policy#2", "01_annual_leave_policy#3", "05_expense_reimbursement_policy#4"], "sub_questions": ["If I resign 8 months after finishing my certification that cost the company NGN 300,000, what do I owe the company?", "What happens to my unused annual leave if I resign?"], "first_attempt": {"verified": 2, "invalid": 0}, "claim_check": {"sentences": 4, "failed": 2, "failures": [{"sentence": "This means you need to repay NGN 150,000, which will be deducted from your final salary where possible.", "verdict": "not_supported", "reason": ""}, {"sentence": "If you have carried over leave, up to 5 unused days can be carried over into the next year, but they must be used by 31 March or they will be lost.", "verdict": "partly_supported", "reason": ""}]}, "claim_check_retry": {"used_retry": true, "dropped": []}}
+INFO:     127.0.0.1:64629 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 11:05:49,618 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:05:49,926 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 11:05:49,934 INFO policy_qa: ask {"question": "What percentage of my salary does the company contribute to my pension?", "answered": false, "top_dense_similarity": 0.3223, "retrieved": ["01_annual_leave_policy#6", "07_learning_and_development_policy#4", "02_sick_leave_policy#5", "06_it_equipment_and_security_policy#1", "03_remote_and_hybrid_work_policy#3"], "refused_by": "gate"}
+INFO:     127.0.0.1:64634 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 11:05:52,747 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:05:53,044 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 11:05:53,053 INFO policy_qa: ask {"question": "Can I bring my dog to the office?", "answered": false, "top_dense_similarity": 0.3325, "retrieved": ["03_remote_and_hybrid_work_policy#1", "02_sick_leave_policy#2", "02_sick_leave_policy#5", "09_code_of_conduct_gifts_policy#4", "03_remote_and_hybrid_work_policy#4"], "refused_by": "gate"}
+INFO:     127.0.0.1:64637 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 11:05:55,821 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:05:56,287 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 11:05:56,300 INFO policy_qa: ask {"question": "What is the vesting schedule for employee stock options?", "answered": false, "top_dense_similarity": 0.2975, "retrieved": ["07_learning_and_development_policy#4", "01_annual_leave_policy#6", "08_parental_leave_policy#5", "07_learning_and_development_policy#1", "01_annual_leave_policy#3"], "refused_by": "gate"}
+INFO:     127.0.0.1:64639 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 11:06:22,441 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:06:22,802 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 11:06:24,169 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:06:25,151 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:06:25,165 INFO policy_qa: ask {"question": "How many days of annual leave do I get after my probation ends?", "answered": true, "top_dense_similarity": 0.6547, "retrieved": ["01_annual_leave_policy#3", "01_annual_leave_policy#2", "01_annual_leave_policy#6", "01_annual_leave_policy#1", "01_annual_leave_policy#5"], "first_attempt": {"verified": 1, "invalid": 0}, "claim_check": {"sentences": 1, "failed": 0}}
+INFO:     127.0.0.1:64642 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 11:06:28,209 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:06:28,575 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 11:06:30,622 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:06:32,066 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:06:32,084 INFO policy_qa: ask {"question": "How many unused leave days can I carry over into next year, and when do I have to use them?", "answered": true, "top_dense_similarity": 0.706, "retrieved": ["01_annual_leave_policy#5", "02_sick_leave_policy#1", "01_annual_leave_policy#6", "01_annual_leave_policy#3", "01_annual_leave_policy#1", "01_annual_leave_policy#4", "07_learning_and_development_policy#3", "02_sick_leave_policy#4"], "sub_questions": ["How many unused leave days can I carry over into next year?", "When do I have to use my unused leave days?"], "first_attempt": {"verified": 2, "invalid": 0}, "claim_check": {"sentences": 2, "failed": 0}}
+INFO:     127.0.0.1:64646 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 11:06:34,800 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:06:35,083 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 11:06:36,611 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:06:37,616 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:06:37,618 INFO policy_qa: ask {"question": "When do I need a medical certificate for sick leave?", "answered": true, "top_dense_similarity": 0.7365, "retrieved": ["02_sick_leave_policy#3", "02_sick_leave_policy#4", "02_sick_leave_policy#5", "02_sick_leave_policy#1", "01_annual_leave_policy#6"], "first_attempt": {"verified": 1, "invalid": 0}, "claim_check": {"sentences": 1, "failed": 0}}
+INFO:     127.0.0.1:64650 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 11:06:40,517 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:06:40,824 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 11:06:42,468 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:06:43,495 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:06:43,517 INFO policy_qa: ask {"question": "Which days am I expected to be in the office?", "answered": true, "top_dense_similarity": 0.5027, "retrieved": ["03_remote_and_hybrid_work_policy#1", "01_annual_leave_policy#4", "10_working_hours_and_overtime_policy#4", "02_sick_leave_policy#2", "10_working_hours_and_overtime_policy#2"], "first_attempt": {"verified": 1, "invalid": 0}, "claim_check": {"sentences": 1, "failed": 0}}
+INFO:     127.0.0.1:64652 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 11:06:46,489 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:06:46,794 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 11:06:48,083 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:06:49,152 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:06:49,155 INFO policy_qa: ask {"question": "How far in advance do I need to request an international trip?", "answered": true, "top_dense_similarity": 0.49, "retrieved": ["04_business_travel_policy#2", "01_annual_leave_policy#4", "04_business_travel_policy#4", "03_remote_and_hybrid_work_policy#2", "01_annual_leave_policy#1"], "first_attempt": {"verified": 1, "invalid": 0}, "claim_check": {"sentences": 1, "failed": 0}}
+INFO:     127.0.0.1:64654 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 11:06:52,103 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:06:52,423 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 11:06:53,717 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:06:54,703 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:06:54,715 INFO policy_qa: ask {"question": "What is the deadline for submitting an expense claim?", "answered": true, "top_dense_similarity": 0.6509, "retrieved": ["05_expense_reimbursement_policy#2", "04_business_travel_policy#6", "05_expense_reimbursement_policy#5", "05_expense_reimbursement_policy#4", "05_expense_reimbursement_policy#1"], "first_attempt": {"verified": 1, "invalid": 0}, "claim_check": {"sentences": 1, "failed": 0}}
+INFO:     127.0.0.1:64657 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 11:06:57,551 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:06:57,847 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 11:07:00,351 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:07:02,074 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:07:02,082 INFO policy_qa: ask {"question": "I lost my work laptop. What should I do?", "answered": true, "top_dense_similarity": 0.4839, "retrieved": ["06_it_equipment_and_security_policy#1", "06_it_equipment_and_security_policy#2", "03_remote_and_hybrid_work_policy#4", "03_remote_and_hybrid_work_policy#1", "08_parental_leave_policy#4"], "first_attempt": {"verified": 2, "invalid": 0}, "claim_check": {"sentences": 3, "failed": 0}}
+INFO:     127.0.0.1:64659 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 11:07:05,065 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:07:05,370 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 11:07:07,434 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:07:08,644 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:07:08,661 INFO policy_qa: ask {"question": "What is my yearly budget for training and courses?", "answered": true, "top_dense_similarity": 0.6125, "retrieved": ["07_learning_and_development_policy#1", "04_business_travel_policy#5", "07_learning_and_development_policy#3", "07_learning_and_development_policy#4", "02_sick_leave_policy#3", "07_learning_and_development_policy#2", "01_annual_leave_policy#6", "01_annual_leave_policy#4"], "sub_questions": ["What is my yearly budget for training?", "What is my yearly budget for courses?"], "first_attempt": {"verified": 1, "invalid": 0}, "claim_check": {"sentences": 2, "failed": 0}}
+INFO:     127.0.0.1:64664 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 11:07:11,677 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:07:12,027 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 11:07:13,916 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:07:14,870 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:07:14,886 INFO policy_qa: ask {"question": "How much paternity leave do I get?", "answered": true, "top_dense_similarity": 0.7014, "retrieved": ["08_parental_leave_policy#2", "08_parental_leave_policy#1", "08_parental_leave_policy#3", "08_parental_leave_policy#4", "01_annual_leave_policy#3"], "first_attempt": {"verified": 1, "invalid": 0}, "claim_check": {"sentences": 1, "failed": 0}}
+INFO:     127.0.0.1:64666 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 11:07:17,825 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:07:18,133 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 11:07:19,734 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:07:21,578 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:07:21,590 INFO policy_qa: ask {"question": "A supplier sent me a gift worth NGN 25,000. Can I keep it?", "answered": false, "top_dense_similarity": 0.5712, "retrieved": ["09_code_of_conduct_gifts_policy#2", "09_code_of_conduct_gifts_policy#3", "05_expense_reimbursement_policy#2", "05_expense_reimbursement_policy#3", "09_code_of_conduct_gifts_policy#4"], "first_attempt": {"verified": 0, "invalid": 1}, "retry": {"verified": 0, "invalid": 1}, "refused_by": "no_verified_citation"}
+INFO:     127.0.0.1:64671 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 11:07:24,674 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:07:25,071 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 11:07:27,787 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:07:31,097 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:07:32,490 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:07:34,819 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:07:36,245 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:07:36,276 INFO policy_qa: ask {"question": "I stayed in a hotel costing NGN 70,000 per night on a domestic work trip. Is that within the limit, and who needs to approve my claim?", "answered": true, "top_dense_similarity": 0.6958, "retrieved": ["04_business_travel_policy#4", "04_business_travel_policy#6", "04_business_travel_policy#5", "05_expense_reimbursement_policy#5", "05_expense_reimbursement_policy#1", "03_remote_and_hybrid_work_policy#3", "02_sick_leave_policy#5", "09_code_of_conduct_gifts_policy#2"], "sub_questions": ["Is the hotel cost of NGN 70,000 per night within the limit for domestic work trips?", "Who needs to approve my claim for the hotel expenses?"], "first_attempt": {"verified": 1, "invalid": 1}, "retry": {"verified": 1, "invalid": 1}, "claim_check": {"sentences": 2, "failed": 1, "failures": [{"sentence": "Since your travel costs were not booked by the Travel Desk, you will need to claim them under the Expense Reimbursement Policy (FIN-01).", "verdict": "not_supported", "reason": "checker evidence not found in the named section"}]}, "claim_check_retry": {"used_retry": true, "dropped": ["Since your travel costs were not booked by the Travel Desk, you will need to claim them under the Expense Reimbursement Policy (FIN-01)."]}}
+INFO:     127.0.0.1:64680 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 11:07:39,368 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:07:39,681 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 11:07:42,641 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:07:44,524 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:07:47,621 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:07:50,193 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:07:50,196 INFO policy_qa: ask {"question": "The company paid NGN 300,000 for my certification. If I resign 8 months after finishing it, what do I owe, and what happens to my unused annual leave?", "answered": true, "top_dense_similarity": 0.6468, "retrieved": ["07_learning_and_development_policy#4", "01_annual_leave_policy#6", "05_expense_reimbursement_policy#2", "01_annual_leave_policy#5", "09_code_of_conduct_gifts_policy#2", "01_annual_leave_policy#1", "05_expense_reimbursement_policy#3", "01_annual_leave_policy#3"], "sub_questions": ["If I resign 8 months after finishing my certification that cost NGN 300,000, what do I owe the company?", "What happens to my unused annual leave if I resign?"], "first_attempt": {"verified": 2, "invalid": 0}, "claim_check": {"sentences": 4, "failed": 1, "failures": [{"sentence": "This means you will need to repay NGN 150,000, which will be deducted from your final salary.", "verdict": "not_supported", "reason": ""}]}, "claim_check_retry": {"used_retry": true, "dropped": []}}
+INFO:     127.0.0.1:56928 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 11:07:53,049 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:07:53,343 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 11:07:53,351 INFO policy_qa: ask {"question": "What percentage of my salary does the company contribute to my pension?", "answered": false, "top_dense_similarity": 0.3223, "retrieved": ["01_annual_leave_policy#6", "07_learning_and_development_policy#4", "02_sick_leave_policy#5", "06_it_equipment_and_security_policy#1", "03_remote_and_hybrid_work_policy#3"], "refused_by": "gate"}
+INFO:     127.0.0.1:63544 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 11:07:56,120 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:07:56,397 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 11:07:56,411 INFO policy_qa: ask {"question": "Can I bring my dog to the office?", "answered": false, "top_dense_similarity": 0.3325, "retrieved": ["03_remote_and_hybrid_work_policy#1", "02_sick_leave_policy#2", "02_sick_leave_policy#5", "09_code_of_conduct_gifts_policy#4", "03_remote_and_hybrid_work_policy#4"], "refused_by": "gate"}
+INFO:     127.0.0.1:63546 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 11:07:59,330 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:07:59,699 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 11:07:59,719 INFO policy_qa: ask {"question": "What is the vesting schedule for employee stock options?", "answered": false, "top_dense_similarity": 0.2975, "retrieved": ["07_learning_and_development_policy#4", "01_annual_leave_policy#6", "08_parental_leave_policy#5", "07_learning_and_development_policy#1", "01_annual_leave_policy#3"], "refused_by": "gate"}
+INFO:     127.0.0.1:63548 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 11:08:21,160 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:08:21,484 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 11:08:23,113 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:08:24,151 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:08:24,166 INFO policy_qa: ask {"question": "How many days of annual leave do I get after my probation ends?", "answered": true, "top_dense_similarity": 0.6547, "retrieved": ["01_annual_leave_policy#3", "01_annual_leave_policy#2", "01_annual_leave_policy#6", "01_annual_leave_policy#1", "01_annual_leave_policy#5"], "first_attempt": {"verified": 1, "invalid": 0}, "claim_check": {"sentences": 1, "failed": 0}}
+INFO:     127.0.0.1:63550 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 11:08:27,188 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:08:27,563 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 11:08:29,651 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:08:31,202 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:08:31,209 INFO policy_qa: ask {"question": "How many unused leave days can I carry over into next year, and when do I have to use them?", "answered": true, "top_dense_similarity": 0.7059, "retrieved": ["01_annual_leave_policy#5", "02_sick_leave_policy#1", "01_annual_leave_policy#6", "01_annual_leave_policy#3", "01_annual_leave_policy#1", "07_learning_and_development_policy#3", "01_annual_leave_policy#4", "07_learning_and_development_policy#1"], "sub_questions": ["How many unused leave days can I carry over into next year?", "When do I have to use my unused leave days that are carried over?"], "first_attempt": {"verified": 2, "invalid": 0}, "claim_check": {"sentences": 2, "failed": 0}}
+INFO:     127.0.0.1:63553 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 11:08:34,066 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:08:34,351 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 11:08:36,089 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:08:37,176 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:08:37,195 INFO policy_qa: ask {"question": "When do I need a medical certificate for sick leave?", "answered": true, "top_dense_similarity": 0.7365, "retrieved": ["02_sick_leave_policy#3", "02_sick_leave_policy#4", "02_sick_leave_policy#5", "02_sick_leave_policy#1", "01_annual_leave_policy#6"], "first_attempt": {"verified": 1, "invalid": 0}, "claim_check": {"sentences": 1, "failed": 0}}
+INFO:     127.0.0.1:63555 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 11:08:40,277 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:08:40,654 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 11:08:42,397 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:08:43,545 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:08:43,555 INFO policy_qa: ask {"question": "Which days am I expected to be in the office?", "answered": true, "top_dense_similarity": 0.5027, "retrieved": ["03_remote_and_hybrid_work_policy#1", "01_annual_leave_policy#4", "10_working_hours_and_overtime_policy#4", "02_sick_leave_policy#2", "10_working_hours_and_overtime_policy#2"], "first_attempt": {"verified": 1, "invalid": 0}, "claim_check": {"sentences": 1, "failed": 0}}
+INFO:     127.0.0.1:63557 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 11:08:46,374 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:08:46,688 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 11:08:48,052 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:08:49,056 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:08:49,066 INFO policy_qa: ask {"question": "How far in advance do I need to request an international trip?", "answered": true, "top_dense_similarity": 0.4901, "retrieved": ["04_business_travel_policy#2", "01_annual_leave_policy#4", "04_business_travel_policy#4", "03_remote_and_hybrid_work_policy#2", "01_annual_leave_policy#1"], "first_attempt": {"verified": 1, "invalid": 0}, "claim_check": {"sentences": 1, "failed": 0}}
+INFO:     127.0.0.1:63560 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 11:08:51,933 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:08:52,286 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 11:08:53,615 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:08:54,650 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:08:54,667 INFO policy_qa: ask {"question": "What is the deadline for submitting an expense claim?", "answered": true, "top_dense_similarity": 0.6509, "retrieved": ["05_expense_reimbursement_policy#2", "04_business_travel_policy#6", "05_expense_reimbursement_policy#5", "05_expense_reimbursement_policy#4", "05_expense_reimbursement_policy#1"], "first_attempt": {"verified": 1, "invalid": 0}, "claim_check": {"sentences": 1, "failed": 0}}
+INFO:     127.0.0.1:62254 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 11:08:58,073 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:08:58,565 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 11:09:01,436 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:09:03,240 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:09:03,251 INFO policy_qa: ask {"question": "I lost my work laptop. What should I do?", "answered": true, "top_dense_similarity": 0.6303, "retrieved": ["06_it_equipment_and_security_policy#1", "06_it_equipment_and_security_policy#2", "03_remote_and_hybrid_work_policy#4", "06_it_equipment_and_security_policy#4", "08_parental_leave_policy#5", "02_sick_leave_policy#2", "01_annual_leave_policy#5", "08_parental_leave_policy#4"], "sub_questions": ["What steps should I take immediately after losing my work laptop?", "Who should I report the loss of my work laptop to?", "Are there any specific company policies regarding lost work laptops that I should be aware of?"], "first_attempt": {"verified": 2, "invalid": 0}, "claim_check": {"sentences": 3, "failed": 0}}
+INFO:     127.0.0.1:62256 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 11:09:06,141 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:09:06,469 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 11:09:08,067 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:09:09,474 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:09:09,482 INFO policy_qa: ask {"question": "What is my yearly budget for training and courses?", "answered": true, "top_dense_similarity": 0.6125, "retrieved": ["07_learning_and_development_policy#1", "04_business_travel_policy#5", "07_learning_and_development_policy#3", "07_learning_and_development_policy#4", "02_sick_leave_policy#3", "07_learning_and_development_policy#2", "01_annual_leave_policy#6", "01_annual_leave_policy#4"], "sub_questions": ["What is my yearly budget for training?", "What is my yearly budget for courses?"], "first_attempt": {"verified": 1, "invalid": 0}, "claim_check": {"sentences": 2, "failed": 0}}
+INFO:     127.0.0.1:57319 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 11:09:12,318 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:09:12,659 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 11:09:14,859 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:09:16,192 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:09:16,203 INFO policy_qa: ask {"question": "How much paternity leave do I get?", "answered": true, "top_dense_similarity": 0.7014, "retrieved": ["08_parental_leave_policy#2", "08_parental_leave_policy#1", "08_parental_leave_policy#3", "08_parental_leave_policy#4", "01_annual_leave_policy#3"], "first_attempt": {"verified": 2, "invalid": 0}, "claim_check": {"sentences": 2, "failed": 0}}
+INFO:     127.0.0.1:57321 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 11:09:19,177 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:09:19,669 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 11:09:21,810 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:09:23,999 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:09:25,757 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:09:25,769 INFO policy_qa: ask {"question": "A supplier sent me a gift worth NGN 25,000. Can I keep it?", "answered": true, "top_dense_similarity": 0.5712, "retrieved": ["09_code_of_conduct_gifts_policy#2", "09_code_of_conduct_gifts_policy#3", "05_expense_reimbursement_policy#2", "05_expense_reimbursement_policy#3", "09_code_of_conduct_gifts_policy#4"], "first_attempt": {"verified": 0, "invalid": 1}, "retry": {"verified": 1, "invalid": 0}, "claim_check": {"sentences": 3, "failed": 0}}
+INFO:     127.0.0.1:57323 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 11:09:28,896 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:09:29,310 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 11:09:31,663 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:09:33,626 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:09:34,878 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:09:37,072 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:09:38,317 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:09:38,319 INFO policy_qa: ask {"question": "I stayed in a hotel costing NGN 70,000 per night on a domestic work trip. Is that within the limit, and who needs to approve my claim?", "answered": true, "top_dense_similarity": 0.6958, "retrieved": ["04_business_travel_policy#4", "04_business_travel_policy#6", "04_business_travel_policy#5", "05_expense_reimbursement_policy#5", "05_expense_reimbursement_policy#1", "03_remote_and_hybrid_work_policy#3", "02_sick_leave_policy#5", "09_code_of_conduct_gifts_policy#2"], "sub_questions": ["Is the hotel cost of NGN 70,000 per night within the limit for domestic work trips?", "Who needs to approve my claim for the hotel expenses?"], "first_attempt": {"verified": 1, "invalid": 1}, "retry": {"verified": 1, "invalid": 0}, "claim_check": {"sentences": 2, "failed": 1, "failures": [{"sentence": "Your claim for this expense needs to be approved according to the Expense Reimbursement Policy, as it is not specified who exactly approves claims in the provided sections.", "verdict": "not_supported", "reason": ""}]}, "claim_check_retry": {"used_retry": true, "dropped": []}, "not_covered": "Who needs to approve the claim"}
+INFO:     127.0.0.1:57325 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 11:09:41,438 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:09:41,742 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 11:09:44,579 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:09:46,135 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:09:49,610 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:09:52,198 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:09:52,200 INFO policy_qa: ask {"question": "The company paid NGN 300,000 for my certification. If I resign 8 months after finishing it, what do I owe, and what happens to my unused annual leave?", "answered": true, "top_dense_similarity": 0.6468, "retrieved": ["07_learning_and_development_policy#4", "01_annual_leave_policy#6", "05_expense_reimbursement_policy#2", "01_annual_leave_policy#5", "09_code_of_conduct_gifts_policy#2", "01_annual_leave_policy#1", "05_expense_reimbursement_policy#3", "01_annual_leave_policy#3"], "sub_questions": ["If I resign 8 months after finishing my certification that cost NGN 300,000, what do I owe the company?", "What happens to my unused annual leave if I resign?"], "first_attempt": {"verified": 2, "invalid": 0}, "claim_check": {"sentences": 3, "failed": 1, "failures": [{"sentence": "This means you will need to repay NGN 150,000, which will be deducted from your final salary.", "verdict": "partly_supported", "reason": ""}]}, "claim_check_retry": {"used_retry": true, "dropped": ["Since the company paid NGN 300,000 for your certification, you will need to repay NGN 150,000."]}}
+INFO:     127.0.0.1:57327 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 11:09:55,214 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:09:55,567 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 11:09:55,578 INFO policy_qa: ask {"question": "What percentage of my salary does the company contribute to my pension?", "answered": false, "top_dense_similarity": 0.3223, "retrieved": ["01_annual_leave_policy#6", "07_learning_and_development_policy#4", "02_sick_leave_policy#5", "06_it_equipment_and_security_policy#1", "03_remote_and_hybrid_work_policy#3"], "refused_by": "gate"}
+INFO:     127.0.0.1:57329 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 11:09:58,329 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:09:58,700 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 11:09:58,706 INFO policy_qa: ask {"question": "Can I bring my dog to the office?", "answered": false, "top_dense_similarity": 0.3325, "retrieved": ["03_remote_and_hybrid_work_policy#1", "02_sick_leave_policy#2", "02_sick_leave_policy#5", "09_code_of_conduct_gifts_policy#4", "03_remote_and_hybrid_work_policy#4"], "refused_by": "gate"}
+INFO:     127.0.0.1:56413 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 11:10:01,485 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:10:01,847 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 11:10:01,854 INFO policy_qa: ask {"question": "What is the vesting schedule for employee stock options?", "answered": false, "top_dense_similarity": 0.2975, "retrieved": ["07_learning_and_development_policy#4", "01_annual_leave_policy#6", "08_parental_leave_policy#5", "07_learning_and_development_policy#1", "01_annual_leave_policy#3"], "refused_by": "gate"}
+INFO:     127.0.0.1:56415 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 11:18:41,068 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:18:41,562 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 11:18:43,437 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:18:44,725 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:18:44,728 INFO policy_qa: ask {"question": "What is the daily allowance for a domestic work trip?", "answered": true, "top_dense_similarity": 0.6003, "retrieved": ["04_business_travel_policy#5", "03_remote_and_hybrid_work_policy#3", "04_business_travel_policy#4", "01_annual_leave_policy#6", "05_expense_reimbursement_policy#5"], "first_attempt": {"verified": 1, "invalid": 0}, "claim_check": {"sentences": 2, "failed": 0}}
+INFO:     127.0.0.1:61115 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 11:18:47,799 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:18:48,332 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 11:18:49,824 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:18:50,911 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:18:50,919 INFO policy_qa: ask {"question": "How long does my password need to be?", "answered": true, "top_dense_similarity": 0.5866, "retrieved": ["06_it_equipment_and_security_policy#3", "06_it_equipment_and_security_policy#4", "02_sick_leave_policy#5", "06_it_equipment_and_security_policy#2", "08_parental_leave_policy#2"], "first_attempt": {"verified": 1, "invalid": 0}, "claim_check": {"sentences": 1, "failed": 0}}
+INFO:     127.0.0.1:61120 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 11:18:53,697 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:18:54,031 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 11:18:55,289 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:18:56,329 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:18:56,349 INFO policy_qa: ask {"question": "Can I claim for wine at a client dinner?", "answered": true, "top_dense_similarity": 0.4847, "retrieved": ["05_expense_reimbursement_policy#5", "09_code_of_conduct_gifts_policy#4", "09_code_of_conduct_gifts_policy#3", "04_business_travel_policy#6", "08_parental_leave_policy#5"], "first_attempt": {"verified": 1, "invalid": 0}, "claim_check": {"sentences": 1, "failed": 0}}
+INFO:     127.0.0.1:61122 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 11:18:59,335 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:18:59,692 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 11:19:01,062 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:19:02,362 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:19:02,369 INFO policy_qa: ask {"question": "How long do I have to use my time off in lieu?", "answered": true, "top_dense_similarity": 0.5007, "retrieved": ["01_annual_leave_policy#3", "01_annual_leave_policy#4", "02_sick_leave_policy#2", "01_annual_leave_policy#5", "10_working_hours_and_overtime_policy#3"], "first_attempt": {"verified": 1, "invalid": 0}, "claim_check": {"sentences": 1, "failed": 0}}
+INFO:     127.0.0.1:61124 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 11:19:05,174 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:19:05,463 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 11:19:07,143 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:19:08,434 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:19:08,435 INFO policy_qa: ask {"question": "Do hybrid employees get an allowance for internet at home?", "answered": true, "top_dense_similarity": 0.7389, "retrieved": ["03_remote_and_hybrid_work_policy#3", "03_remote_and_hybrid_work_policy#1", "03_remote_and_hybrid_work_policy#2", "04_business_travel_policy#5", "05_expense_reimbursement_policy#1"], "first_attempt": {"verified": 1, "invalid": 0}, "claim_check": {"sentences": 1, "failed": 0}}
+INFO:     127.0.0.1:61127 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 11:19:11,383 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:19:11,696 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 11:19:12,688 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:19:12,700 INFO policy_qa: ask {"question": "How many days of bereavement leave do I get?", "answered": false, "top_dense_similarity": 0.4829, "retrieved": ["01_annual_leave_policy#4", "08_parental_leave_policy#2", "01_annual_leave_policy#3", "02_sick_leave_policy#4", "08_parental_leave_policy#5"], "refused_by": "llm_nothing_covered", "not_covered": "The policy sections do not mention bereavement leave."}
+INFO:     127.0.0.1:61130 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 11:19:15,581 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:19:15,944 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 11:19:17,041 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:19:17,049 INFO policy_qa: ask {"question": "Does the company provide health insurance?", "answered": false, "top_dense_similarity": 0.4312, "retrieved": ["02_sick_leave_policy#5", "06_it_equipment_and_security_policy#1", "05_expense_reimbursement_policy#1", "07_learning_and_development_policy#4", "07_learning_and_development_policy#1"], "refused_by": "llm_nothing_covered", "not_covered": "The sections do not mention health insurance."}
+INFO:     127.0.0.1:61132 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 11:19:20,075 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:19:20,475 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 11:19:21,384 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:19:21,386 INFO policy_qa: ask {"question": "Can I get a company car or a fuel allowance?", "answered": false, "top_dense_similarity": 0.4352, "retrieved": ["06_it_equipment_and_security_policy#1", "03_remote_and_hybrid_work_policy#3", "06_it_equipment_and_security_policy#4", "04_business_travel_policy#5", "05_expense_reimbursement_policy#1", "05_expense_reimbursement_policy#2", "09_code_of_conduct_gifts_policy#4", "05_expense_reimbursement_policy#5"], "sub_questions": ["Can I get a company car?", "Can I get a fuel allowance?"], "refused_by": "llm_nothing_covered", "not_covered": "There is no information regarding company cars or fuel allowances."}
+INFO:     127.0.0.1:61134 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 11:19:24,283 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:19:24,560 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 11:19:24,604 INFO policy_qa: ask {"question": "What is the dress code for the office?", "answered": false, "top_dense_similarity": 0.3731, "retrieved": ["03_remote_and_hybrid_work_policy#1", "09_code_of_conduct_gifts_policy#2", "09_code_of_conduct_gifts_policy#1", "09_code_of_conduct_gifts_policy#3", "01_annual_leave_policy#6"], "refused_by": "gate"}
+INFO:     127.0.0.1:61136 - "POST /ask HTTP/1.1" 200 OK
+2026-11-11 11:19:27,484 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:19:27,788 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-11-11 11:19:28,814 INFO httpx2: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-11 11:19:28,844 INFO policy_qa: ask {"question": "When are annual bonuses paid?", "answered": false, "top_dense_similarity": 0.4349, "retrieved": ["01_annual_leave_policy#6", "01_annual_leave_policy#3", "01_annual_leave_policy#1", "05_expense_reimbursement_policy#4", "01_annual_leave_policy#2"], "refused_by": "llm_nothing_covered", "not_covered": "The sections do not mention annual bonuses or their payment schedule."}
+INFO:     127.0.0.1:61138 - "POST /ask HTTP/1.1" 200 OK
